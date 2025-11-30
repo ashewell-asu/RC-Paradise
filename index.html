@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="author" content="Adam Shewell">
+		<meta name="description" content="">
+		<link rel="stylesheet" type="text/css" href="styles.css">
+		<script src="scripts.js" defer></script>
+		<title>GIT 417 Final</title>
+	</head>
+	<body>
+		<header>
+			<div id="logo">
+				<div class="nav-logo">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<path d="M19 17h2c.6 0 1-.4 1-1v-3c0-.9-.7-1.7-1.5-1.9C18.7 10.6 16 10 16 10s-1.3-1.4-2.2-2.3c-.5-.4-1.1-.7-1.8-.7H5c-.6 0-1.1.4-1.4.9l-1.4 2.9A3.7 3.7 0 0 0 2 12v4c0 .6.4 1 1 1h2"/>
+						<circle cx="7" cy="17" r="2"/>
+						<path d="M9 17h6"/>
+						<circle cx="17" cy="17" r="2"/>
+					</svg>
+				</div>
+				<h1 id="siteName">RC Paradise</h1>
+			</div>
+			<div id="navigation">
+				<nav>
+					<ul>
+						<li><a href="index.html">Home</a></li>
+						<li><a href="#services">Services</a></li>
+						<li><a href="#about">About Us</a></li>
+						<li><a href="#contact">Contact Us</a></li>
+					</ul>
+				</nav>
+				<button id="darkMode">
+	                <svg class="moon-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+        	            <path d="M12 3a6 6 0 0 0 9 9 9 9 0 1 1-9-9Z"/>
+    	            </svg>
+					<svg class="sun-icon hidden" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="color: #eab308;">
+						<circle cx="12" cy="12" r="4"/>
+						<path d="M12 2v2"/>
+						<path d="M12 20v2"/>
+						<path d="m4.93 4.93 1.41 1.41"/>
+						<path d="m17.66 17.66 1.41 1.41"/>
+						<path d="M2 12h2"/>
+						<path d="M20 12h2"/>
+						<path d="m6.34 17.66-1.41 1.41"/>
+						<path d="m19.07 4.93-1.41 1.41"/>
+					</svg>     
+				</button>
+				<button id="cart">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+						<circle cx="8" cy="21" r="1"/>
+						<circle cx="19" cy="21" r="1"/>
+						<path d="M2.05 2.05h2l2.66 12.42a2 2 0 0 0 2 1.58h9.78a2 2 0 0 0 1.95-1.57l1.65-7.43H5.12"/>
+					</svg>
+					<span id="cartBadge" class="hidden">0</span>
+				</button>
+				<a href="#products" id="shopNow">Shop Now</a>
+			</div>
+		</header>
+		<main>
+			<section class="hero">
+				<div class="hero-image">
+	                <img src="imgs/speed-demon.jpg" alt="Someone adding oil to an RC car">
+	                <div class="hero-overlay"></div>
+				</div>
+				<div class="hero-content">
+					<div class="hero-badge">
+						<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>
+						<h2>Premium RC Vehicles</h2>
+					</div>
+					<p class="hero-title">Experience The Excitement of Remote Control</p>
+					<h3 class="hero-description">Discover our premium collection of remote control cars, trucks, planes, and helicopters. Built for speed, precision, and endless fun.</h3>
+					<div class="hero-btns">
+						<button class="btn btn-primary btn-lg group">Explore Collection <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+							<line x1="5" x2="19" y1="12" y2="12"/>
+							<polyline points="12 5 19 12 12 19"/>
+							</svg>
+						</button>
+						<button class="btn btn-outline btn-lg">View Bestsellers</button>
+					</div>
+				</div>
+			</section>
+			<section id="services" class="services">
+				<h2>Our Services</h2>
+				<h3>Expert services to keep you racing and having fun. From custom builds to professional repairs, we've got you covered.</h3>
+				<div class="services-btns">
+					<button id="builds" class="switcher-btn active" data-target="builds-info">Custom RC Builds</button>
+					<button id="repairs" class="switcher-btn" data-target="repairs-info">Professional Repairs</button>
+					<button id="raceTrack" class="switcher-btn" data-target="raceTrack-info">Race Track Sessions</button>
+				</div>
+				<div class="switcher-container">
+					<div id="builds-info" class="switcher">
+						<img src="imgs/builds-image.jpeg" alt="Person drawing designs of RC cars">
+						<div>
+							<h3>Custom Services</h3>
+							<h4>Custom RC Builds</h4>
+							<p>Transform your vision into reality with our expert custom RC vehicle building service. Our experienced technicians work with you to design and build a one-of-a-kind RC vehicle tailored to your specifications, whether it's for racing, off-road adventures, or display.</p>
+							<button class="cta group">Learn More <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<line x1="5" x2="19" y1="12" y2="12"/>
+								<polyline points="12 5 19 12 12 19"/>
+								</svg>
+							</button>
+						</div>
+					</div>
+					<div id="repairs-info" class="switcher hidden">
+						<img src="imgs/repairs-image.jpeg" alt="Person drawing designs of RC cars">
+						<div>
+							<h3>Maintenance</h3>
+							<h4>Professional Repairs</h4>
+							<p>Get your RC vehicle back in action with our professional repair services. We handle everything from minor fixes to complete overhauls, using genuine parts and advanced diagnostic tools. Fast turnaround times and quality workmanship guaranteed.</p>
+							<button class="cta group">Learn More <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+									<line x1="5" x2="19" y1="12" y2="12"/>
+									<polyline points="12 5 19 12 12 19"/>
+									</svg>
+							</button>
+						</div>
+					</div>
+					<div id="raceTrack-info" class="switcher hidden">
+						<img src="imgs/track-image.jpeg" alt="Person drawing designs of RC cars">
+						<div>
+							<h3>Track Access</h3>
+							<h4>Racing Track Sessions</h4>
+							<p>Access our premium indoor and outdoor racing tracks. Perfect for beginners and experienced racers alike. Includes track rental, timing systems, and expert coaching. Host private events or join our weekly racing leagues and competitions.</p>
+							<button class="cta group">Learn More <svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+									<line x1="5" x2="19" y1="12" y2="12"/>
+									<polyline points="12 5 19 12 12 19"/>
+									</svg>
+							</button>
+						</div>
+					</div>
+				</div>
+			</section>
+            <section id="products" class="products">
+                <div class="product-header">
+                    <h2>Featured Products</h2>
+                    <h3>Choose from our selection of premium RC Vehicles</h3>
+                </div>
+                <div class="cart-container"></div>
+            </section>
+            <section class="cards" id="about">
+                <h2>Why Choose RC Paradise?</h2>
+                <h3>We're committed to delivering the best RC experience with premium products and exceptional service</h3>
+                <div class="card-container">
+                    <div class="card" id="card1">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M20 13c0 5-3.5 7.5-7.66 8.95a1 1 0 0 1-.67-.01C7.5 20.5 4 18 4 13V6a1 1 0 0 1 1-1c2 0 4.5-1.2 6.24-2.72a1.17 1.17 0 0 1 1.52 0C14.51 3.81 17 5 19 5a1 1 0 0 1 1 1z"/>
+                            </svg>
+                        </div>
+                        <h4>Quality Guaranteed</h4>
+                        <p>All products come with a 1-year warranty and quality assurance</p>
+                    </div>
+                    <div class="card" id="card2">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M14 18V6a2 2 0 0 0-2-2H4a2 2 0 0 0-2 2v11a1 1 0 0 0 1 1h2"/><path d="M15 18H9"/>
+                                <path d="M19 18h2a1 1 0 0 0 1-1v-3.65a1 1 0 0 0-.22-.624l-3.48-4.35A1 1 0 0 0 17.52 8H14"/>
+                                <circle cx="17" cy="18" r="2"/>
+                                <circle cx="7" cy="18" r="2"/>
+                            </svg>
+                        </div>
+                        <h4>Free Shipping</h4>
+                        <p>Free delivery on orders over $100 anywhere in the U.S.</p>
+                    </div>
+                    <div class="card" id="card3">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M3 14h3a2 2 0 0 1 2 2v3a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2v-7a9 9 0 0 1 18 0v7a2 2 0 0 1-2 2h-1a2 2 0 0 1-2-2v-3a2 2 0 0 1 2-2h3"/>
+                            </svg>
+                        </div>
+                        <h4>24/7 Support</h4>
+                        <p>Our expert team is always ready to help you with any questions</p>
+                    </div>
+                    <div class="card" id="card4">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="m15.477 12.89 1.515 8.526a.5.5 0 0 1-.81.47l-3.58-2.687a1 1 0 0 0-1.197 0l-3.586 2.686a.5.5 0 0 1-.81-.469l1.514-8.526"/>
+                                <circle cx="12" cy="8" r="6"/>
+                            </svg>
+                        </div>
+                        <h4>Premium Brands</h4>
+                        <p>We only stock products from trusted and certified manufacturers</p>
+                    </div>
+                    <div class="card" id="card5">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <rect width="16" height="10" x="2" y="7" rx="2" ry="2"/>
+                                <line x1="22" x2="22" y1="11" y2="13"/>
+                                <line x1="6" x2="6" y1="11" y2="13"/>
+                                <line x1="10" x2="10" y1="11" y2="13"/>
+                                <line x1="14" x2="14" y1="11" y2="13"/>
+                            </svg>
+                        </div>
+                        <h4>Long Battery Life</h4>
+                        <p>Extended playtime with high-capacity rechargeable batteries</p>
+                    </div>
+                    <div class="card" id="card6">
+                        <div class="card-icon">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+                            </svg>
+                        </div>
+                        <h4>Fast Performance</h4>
+                        <p>Experience speeds up to 60+ mph with our racing models</p>
+                    </div>
+                </div>
+            </section>
+            <section id="contact">
+                <div class="contact-header">
+                    <h2>Get In Touch</h2>
+                    <h3>Have questions? We'd love to hear from you. Send us a message and we'll respond as soon as possible.</h3>
+                </div>
+                <div class="flexbox">
+                    <div class="form-container">
+                        <form>
+                            <div class="name">
+                                <label for="userName">Name<span class="required">*</span></label>
+                                <input type="text" id="userName" name="userName" placeholder="Your Name">
+                                <p class="hidden" id="nameError"></p>
+                            </div>
+                            <div class="email">
+                                <label for="userEmail">Email<span></span></label>
+                                <input type="email" id="userEmail" name="userEmail" placeholder="your@email.com">
+                                <p class="hidden" id="emailError"></p>
+                            </div>
+                            <div class="phone">
+                                <label for="userPhone">Phone<span></span></label>
+                                <input type="tel" id="userPhone" name="userPhone" placeholder="(555) 555-5555">
+                                <p class="hidden" id="phoneError"></p>
+                            </div>
+                            <div class="prefer">
+                                <fieldset>
+                                    <legend>Preferred Contact Method</legend>
+                                    <div class="radios">
+                                        <div class="radio">
+                                            <input type="radio" id="radioEmail" name="radioContact" checked>
+                                            <label for="radioEmail">Email</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" id="radioPhone" name="radioContact">
+                                            <label for="radioPhone">Phone</label>
+                                        </div>
+                                        <div class="radio">
+                                            <input type="radio" id="radioText" name="radioContact">
+                                            <label for="radioText">Text</label>
+                                        </div>
+                                    </div>
+                                </fieldset>
+                            </div>
+                            <div class="subject">
+                                <label for="subjectMSG">Subject</label>
+                                <input type="text" id="subjectMSG" name="subjectMSG" placeholder="How can we help?">
+                            </div>
+                            <div class="message">
+                                <label for="userMessage">Message<span class="required">*</span></label>
+                                <textarea name="userMessage" id="userMessage" rows="8" maxlength="1000"  placeholder="Tell us more about your inquiry..."></textarea>
+                                <p class="hidden" id="messageError"></p>
+                            </div>
+                            <input type="submit" value="Send Message">
+                        </form>
+                    </div>
+                    <div class="contactFlex">
+                        <div class="contactInfo">
+                            <div class="info">
+                                <div class="infoIcon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect width="20" height="16" x="2" y="4" rx="2"/>
+                                        <path d="m22 7-8.97 5.7a1.94 1.94 0 0 1-2.06 0L2 7"/>
+                                    </svg>
+                                </div>
+                                <div class="infoText">
+                                    <h4>Email</h4>
+                                    <p>support@rcparadise.com</p>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <div class="infoIcon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/>
+                                    </svg>
+                                </div>
+                                <div class="infoText">
+                                    <h4>Phone</h4>    
+                                    <p>+1 (555) 123-4567</p>
+                                </div>
+                            </div>
+                            <div class="info">
+                                <div class="infoIcon">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M20 10c0 6-8 12-8 12s-8-6-8-12a8 8 0 0 1 16 0Z"/>
+                                        <circle cx="12" cy="10" r="3"/>
+                                    </svg>
+                                </div>
+                                <div class="infoText">
+                                    <h4>Address</h4>
+                                    <p>123 RC Street, Hobby City, HC 12345</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="socials">
+                            <h4>Follow Us</h4>
+                            <div class="social-icons">
+                                <div class="social-icon" id="facebook">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/>
+                                    </svg>
+                                </div>
+                                <div class="social-icon" id="twitter">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M22 4s-.7 2.1-2 3.4c1.6 10-9.4 17.3-18 11.6 2.2.1 4.4-.6 6-2C3 15.5.5 9.6 3 5c2.2 2.6 5.6 4.1 9 4-.9-4.2 4-6.6 7-3.8 1.1 0 3-1.2 3-1.2z"/>
+                                    </svg>
+                                </div>
+                                <div class="social-icon" id="instagram">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <rect width="20" height="20" x="2" y="2" rx="5" ry="5"/>
+                                        <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+                                        <line x1="17.5" x2="17.51" y1="6.5" y2="6.5"/>
+                                    </svg>
+                                </div>
+                                <div class="social-icon" id="youtube">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                        <path d="M2.5 17a24.12 24.12 0 0 1 0-10 2 2 0 0 1 1.4-1.4 49.56 49.56 0 0 1 16.2 0A2 2 0 0 1 21.5 7a24.12 24.12 0 0 1 0 10 2 2 0 0 1-1.4 1.4 49.55 49.55 0 0 1-16.2 0A2 2 0 0 1 2.5 17"/>
+                                        <path d="m10 15 5-3-5-3z"/>
+                                    </svg>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="hours">
+                            <h4>Business Hours</h4>
+                            <p id="days1">Monday - Friday</p>
+                            <p id="timeset1">9AM - 8PM</p>
+                            <p id="days2">Saturday</p>
+                            <p id="timeset2">10:00AM - 6PM</p>
+                            <p id="days3">Sunday</p>
+                            <p id="timeset3">Closed</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+		</main>
+        <div id="messageConfirm" class="hidden">
+            <div class="confirm-container">
+                <div class="close">&times;</div>
+                <div id="messageInfo">
+                </div>
+            </div>
+        </div>
+		<footer>
+            <p>&copy; 2025 RC Paradise. All rights reserved. Images From Usplash. | Privacy Policy | Terms of Service</p>
+		</footer>
+		<!-- Shopping Cart Sidebar -->
+		<div id="cartBackdrop" class="cart-backdrop hidden"></div>
+		<div id="cartSidebar" class="cart-sidebar hidden">
+			<div class="cart-header">
+				<div class="cart-header-title">
+					<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><line x1="3" x2="21" y1="6" y2="6"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+					<h2>Shopping Cart</h2>
+				</div>
+				<button class="cart-close-button">
+					<svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><line x1="18" x2="6" y1="6" y2="18"/><line x1="6" x2="18" y1="6" y2="18"/></svg>
+				</button>
+			</div>
+			
+			<div class="cart-items" id="cartItemsContainer">
+				<!-- Cart items will be inserted here -->
+			</div>
+			
+			<div class="cart-coupon" id="cartCoupon">
+				<p><strong>Guess the number and get a discount!</strong></p>
+				<p>We have selected a number between 1 and 10 (inclusive). If you can guess the number we've chosen, you get that percent off your total order!</p>
+				<div id="couponNumberContainer">
+					<label for="couponNumber">Your Guess:</label> <input type="number" id="couponNumber">
+				</div>
+				<button id="couponButton" class="btn btn-primary">Get Your Discount!</button>
+			</div>
+			<p class="congrats-message hidden"><strong>Enjoy your discount!</strong></p>
+			<div class="cart-footer" id="cartFooter">
+				<div class="cart-subtotal">
+					<span class="cart-subtotal-label">Subtotal:</span>
+					<span class="cart-subtotal-amount" id="cartSubtotal">$0.00</span>
+					<br>
+					<span class="cart-subtotal-label">Discount:</span>
+					<span class="cart-subtotal-amount" id="cartDiscount">$0.00</span>
+					<br>
+					<span class="cart-subtotal-label">Shipping:</span>
+					<span class="cart-subtotal-amount" id="cartShipping">$0.00</span>
+					<br>
+					<span class="cart-subtotal-label">Tax:</span>
+					<span class="cart-subtotal-amount" id="cartTax">$0.00</span>
+				</div>
+				<div class="cart-total">
+					<span class="cart-total-label">Total:</span>
+					<span class="cart-total-amount" id="cartTotal">$0.00</span>
+				</div>
+				<button class="btn btn-primary" id="checkoutBtn">Proceed to Checkout</button>
+			</div>
+		</div>
+	</body>
+</html>
