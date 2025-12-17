@@ -809,6 +809,17 @@ h2, h3 {
 	color: var(--card-foreground);
 }
 
+@media screen and (max-width: 500px) {
+	.card-container {
+		grid-template-columns: 1fr;
+	}
+
+	#card1, #card2, #card3, #card4, #card5, #card6 {
+		grid-column: 1/1;
+		margin: 0.5rem 1rem;
+	}
+}
+
 /* End of Card Section CSS */
 
 .flexbox {
